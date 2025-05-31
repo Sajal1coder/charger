@@ -84,12 +84,12 @@ export default {
       const token = localStorage.getItem('token');
       try {
         if (this.isEdit) {
-          await axios.put(`http://localhost:5000/api/charging-stations/${this.charger._id}`,
+          await axios.put(`https://charger-dd82.vercel.app/api/charging-stations/${this.charger._id}`,
             this.form,
             { headers: { Authorization: `Bearer ${token}` } }
           );
         } else {
-          await axios.post('http://localhost:5000/api/charging-stations',
+          await axios.post('https://charger-dd82.vercel.app/api/charging-stations',
             this.form,
             { headers: { Authorization: `Bearer ${token}` } }
           );

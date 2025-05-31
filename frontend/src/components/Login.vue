@@ -35,7 +35,7 @@ export default {
     async handleLogin() {
       this.error = '';
       try {
-        const res = await axios.post('http://localhost:5000/api/auth/login', {
+        const res = await axios.post('https://charger-dd82.vercel.app/api/auth/login', {
           email: this.email,
           password: this.password
         });

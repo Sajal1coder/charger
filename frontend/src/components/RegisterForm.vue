@@ -43,7 +43,7 @@ export default {
       this.error = '';
       this.success = '';
       try {
-        await axios.post('http://localhost:5000/api/auth/register', {
+        await axios.post('https://charger-dd82.vercel.app/api/auth/register', {
           name: this.name,
           email: this.email,
           password: this.password

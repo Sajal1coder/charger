@@ -41,7 +41,7 @@ export default {
     async fetchChargers() {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/charging-stations', {
+        const res = await axios.get('https://charger-dd82.vercel.app/api/charging-stations', {
           headers: { Authorization: `Bearer ${token}` }
         });
         this.chargers = res.data;

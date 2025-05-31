@@ -77,7 +77,7 @@ export default {
     async fetchChargers() {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/charging-stations', {
+        const res = await axios.get('https://charger-dd82.vercel.app/api/charging-stations', {
           headers: { Authorization: `Bearer ${token}` }
         });
         this.chargers = res.data;
@@ -89,7 +89,7 @@ export default {
       if (!confirm('Are you sure you want to delete this charging station?')) return;
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:5000/api/charging-stations/${id}`, {
+        await axios.delete(`https://charger-dd82.vercel.app/api/charging-stations/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         this.fetchChargers();
